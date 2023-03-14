@@ -1,12 +1,12 @@
 import React from "react";
 
 import Header from "../components/Header";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import Router from "../Router/Router";
 
 function Layout() {
   return (
-    <>
+    <div>
       <Header />
       <div className="container">
         <div className="main">
@@ -14,7 +14,7 @@ function Layout() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

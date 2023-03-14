@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { Link, redirect } from "react-router-dom"
+
 const mainNav = [
     {
         display: 'Home',
@@ -20,7 +21,6 @@ const mainNav = [
     },
 ];
 
-
 function Header() {
     const navRef = useRef();
 
@@ -28,7 +28,10 @@ function Header() {
         navRef.current.classList.toggle("responsive_nav");
         console.log("hello")
     }
-
+    const handleItemClick = (path) => {
+        showNavbar();
+        redirect(path);
+    }
     return (
         <header>
             <h3>Logo here</h3>
@@ -38,6 +41,7 @@ function Header() {
                         <div
                             key={index}
                             className="header_menu_item"
+                            onClick={() => handleItemClick(item.path)}
                         >
                             <Link to={item.path}>
                                 <span>{item.display}</span>
@@ -45,11 +49,11 @@ function Header() {
                         </div>
                     );
                 })}
-                <button className = "nav-btn nav-close-btn" onClick={showNavbar}>
+                <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes />
                 </button>
             </nav>
-            <button className = "nav-btn" onClick={showNavbar}>
+            <button className="nav-btn" onClick={showNavbar}>
                 <FaBars />
             </button>
         </header>

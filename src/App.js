@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Style/main.css"
+import "./sass/main.css"
 import Layout from "./Layout/Layout"
 function App() {
   return (
