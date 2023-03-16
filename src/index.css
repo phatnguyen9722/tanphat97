@@ -8,9 +8,9 @@
 }
 
 :root {
-    --main-color: #CBE4DE;
+    --main-color: #1b2430;
     --main-color-light: #0E8388;
     --secondary-color: #2E4F4F;
-    --text-color: #2C3333;
-    --text-active-color: #2E4F4F;
+    --text-color: #fff;
+    --text-active-color: #F2CD5C;
 }

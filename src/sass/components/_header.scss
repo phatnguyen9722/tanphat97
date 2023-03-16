@@ -6,11 +6,11 @@ header {
   padding: 0 2rem;
   background-color: $header-background-color;
   color: $header-text-color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 
   @include desktop {
     .responsive_nav {
       transform: none;
-      background-color: red;
     }
   }
 
@@ -25,6 +25,7 @@ header {
 
       &:hover {
         color: $header-text-active-color;
+        font-weight: 500;
       }
 
       @include desktop {

@@ -1,6 +1,6 @@
 function Home() {
     return (
-        <> Home</>
+        <h1> Fly with creativity's wings of imagination</h1>
     );
 };
 
