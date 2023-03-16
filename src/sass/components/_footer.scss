@@ -1,0 +1,11 @@
+footer {
+  background-color: $footer-background-color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  color: $footer-text-color;
+  height: $footer-height;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

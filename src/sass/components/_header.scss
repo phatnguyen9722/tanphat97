@@ -1,12 +1,17 @@
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
   background-color: $header-background-color;
-  color: $header-text-color;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  color: $header-text-color;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   @include desktop {
     .responsive_nav {
