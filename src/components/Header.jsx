@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, redirect } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const mainNav = [
   {
@@ -36,7 +37,11 @@ function Header() {
   return (
     <header>
       <div className="container">
-        <h3>NTP</h3>
+        <div className="header__logo">
+          <Link to="/">
+            <img src={logo} alt="Here is Logo" />
+          </Link>
+        </div>
         <nav ref={navRef}>
           {mainNav.map((item, index) => {
             return (

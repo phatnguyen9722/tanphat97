@@ -11,6 +11,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .header__logo {
+      height: 100%;
+      img {
+        width: 5rem;
+      }
+    }
   }
 
   @include desktop {
