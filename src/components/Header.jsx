@@ -26,15 +26,16 @@ function Header() {
 
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
-        console.log("hello")
-    }
+    };
+
     const handleItemClick = (path) => {
         showNavbar();
         redirect(path);
-    }
+    };
+
     return (
         <header>
-            <h3>Logo here</h3>
+            <h3>NTP</h3>
             <nav ref={navRef}>
                 {mainNav.map((item, index) => {
                     return (
