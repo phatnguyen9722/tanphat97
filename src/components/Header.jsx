@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const mainNav = [
@@ -18,7 +18,7 @@ const mainNav = [
   },
   {
     display: "Contact",
-    path: "/contact",
+    path: "/#contact-site",
   },
   {
     display: "My CV",
@@ -35,7 +35,19 @@ function Header() {
 
   const handleItemClick = (path) => {
     showNavbar();
-    redirect(path);
+    if (path.startsWith("/#")) {
+      const targetId = path.substring(2);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const topOffset = targetElement.offsetTop;
+        window.scrollTo({
+          top: topOffset,
+          behavior: "smooth"
+        })
+      }
+    } else {
+      window.location.href = path;
+    }
   };
 
   const prevScrollY = useRef(0);

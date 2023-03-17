@@ -1,3 +1,6 @@
+import Contact from "../components/Contact"
+
+
 function Home() {
   return (
     <>
@@ -185,6 +188,7 @@ function Home() {
         exact original form, accompanied by English versions from the 1914
         translation by H. Rackham.
       </p>
+      <Contact />
     </>
   );
 }
