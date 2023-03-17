@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, redirect } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -20,6 +20,10 @@ const mainNav = [
     display: "Contact",
     path: "/contact",
   },
+  {
+    display: "My CV",
+    path: "/cv"
+  }
 ];
 
 function Header() {
@@ -34,8 +38,41 @@ function Header() {
     redirect(path);
   };
 
+  const prevScrollY = useRef(0);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+  
+  useEffect(() => {
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+      prevScrollY.current = currentScrollY;
+
+      console.log("current: ",currentScrollY);
+      console.log("last: ",lastScrollTop);
+       // Check the direction of the scroll
+      if (currentScrollY === 0) {
+        setOpacity(1);
+      } else if (currentScrollY > lastScrollTop) {
+        setOpacity(0);
+      } else {
+        setOpacity(0.85);
+      }
+      // Store the last scroll position
+      setLastScrollTop(currentScrollY);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return (
+      () => {
+        window.removeEventListener("scroll",handleScroll);
+      }
+    )
+  },[lastScrollTop]);
+
+  
   return (
-    <header>
+    <header style={{ opacity }}>
       <div className="container">
         <div className="header__logo">
           <Link to="/">

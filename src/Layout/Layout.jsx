@@ -6,7 +6,7 @@ import Router from "../Router/Router";
 
 function Layout() {
   return (
-    <div>
+    <div className="layout">
       <Header />
       <div className="container">
         <div className="main">
