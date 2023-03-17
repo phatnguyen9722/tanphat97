@@ -1,9 +1,10 @@
 :root {
     --main-color: #1b2430;
     --main-color-light: #0E8388;
-    --secondary-color: #2E4F4F;
+    --secondary-color: #ECF2FF;
 
     --text-color: #fff;
+    --text-color-context: #1b2430;
     --text-active-color: #F2CD5C;
 
     --layout-color: #ECF2FF;

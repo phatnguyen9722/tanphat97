@@ -1,0 +1,63 @@
+.contact {
+    background-color: $contact-background-color;
+    width: 64%;
+    margin: 100px auto;
+    padding: 70px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background-image: url(../../assets/intro.png);
+    background-size: cover;
+
+    > &__content {
+        color: $contact-text-color;  
+        h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 2rem;
+            margin-bottom: 25px;
+        }
+    }
+
+    @include desktop {
+        width: 100%;
+    }
+
+    > &__email_box {
+        form {
+            input[type=email] {
+                max-width: 100%;
+                width: 20rem;
+                padding: 12px 15px;
+                background-color: $contact-background-color;
+                border: none;
+                outline: none;
+                margin: 0 10px 20px 0;
+                border-radius: 30px;
+
+                @include desktop {
+                    width: 17rem;
+                }
+            }
+            input[type=submit] {
+                padding: 12px 40px;
+                background-color: $contact-background-opposite-color;
+                border: none;
+                outline: none;
+                margin: 0 10px 20px 0;
+                border-radius: 30px;
+                &:hover {
+                    cursor: pointer;
+                    filter: contrast(0.8) brightness(1.15);
+                }
+            }
+        }
+    }
+}
