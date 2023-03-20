@@ -70,7 +70,7 @@ function Header() {
       }
       // Store the last scroll position
       setLastScrollTop(currentScrollY);
-    }, 1000);
+    }, 300);
   
     window.addEventListener("scroll", debounceHandleScroll);
   
