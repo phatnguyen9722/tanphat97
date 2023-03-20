@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import _ from "lodash"
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -55,13 +56,11 @@ function Header() {
   const [opacity, setOpacity] = useState(1);
   
   useEffect(() => {
-    function handleScroll() {
+    const debounceHandleScroll = _.debounce(() => {
       const currentScrollY = window.scrollY;
       prevScrollY.current = currentScrollY;
-
-      console.log("current: ",currentScrollY);
-      console.log("last: ",lastScrollTop);
-       // Check the direction of the scroll
+  
+      // Check the direction of the scroll
       if (currentScrollY === 0) {
         setOpacity(1);
       } else if (currentScrollY > lastScrollTop) {
@@ -71,16 +70,14 @@ function Header() {
       }
       // Store the last scroll position
       setLastScrollTop(currentScrollY);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return (
-      () => {
-        window.removeEventListener("scroll",handleScroll);
-      }
-    )
-  },[lastScrollTop]);
+    }, 1000);
+  
+    window.addEventListener("scroll", debounceHandleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", debounceHandleScroll);
+    };
+  }, [lastScrollTop]);
 
   
   return (

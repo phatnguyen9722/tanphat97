@@ -1,14 +1,17 @@
-# This is my web project about Digimon World
-
+# This is my personal web project
 ## Using mainly React.js
 
 ## Link Demo:
 
 [Click here](https://tanphat97.com/home)
 
-## Here are some configs
+## Logics i use: 
+### HEADER: 
+- lodash debounce "_.debounce()" method => delay scroll behavior => improve performance
 
 ### Make .env file
 
-- PORT = 3010 or your port you want to open in dev mode
+- PORT = 3010 or your port you want to open in dev mode</br>
 - BROWSER = none
+
+
