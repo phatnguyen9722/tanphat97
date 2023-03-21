@@ -19,7 +19,7 @@ const mainNav = [
   },
   {
     display: "Contact",
-    path: "/#contact-site",
+    path: "/contact",
   },
   {
     display: "My CV",

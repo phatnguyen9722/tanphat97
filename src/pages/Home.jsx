@@ -1,10 +1,11 @@
-import Contact from "../components/Contact"
-
+import Banner from "../components/Banner";
+import ContactBox from "../components/ContactBox";
 
 function Home() {
   return (
     <>
-      <h1> Fly with creativity's wings of imagination</h1>
+      <Banner />
+      
       <p>
         What is Lorem Ipsum? <br />
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -188,7 +189,7 @@ function Home() {
         exact original form, accompanied by English versions from the 1914
         translation by H. Rackham.
       </p>
-      <Contact />
+      <ContactBox />
     </>
   );
 }

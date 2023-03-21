@@ -14,3 +14,9 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+@mixin flex($align-item, $justify-content) {
+    display: flex;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}

@@ -7,7 +7,7 @@
 
 ## Logics i use: 
 ### HEADER: 
-- lodash debounce "_.debounce()" method => delay scroll behavior => improve performance
+- lodash debounce "_.debounce()" method => delay scroll behavior => improve performance </br>
 
 ### Make .env file
 

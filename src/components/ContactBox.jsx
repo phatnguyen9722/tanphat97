@@ -1,11 +1,11 @@
 function Contact() {
   return (
-    <div className="contact" id="contact-site">
-      <div className="contact__content">
+    <div className="contact-box" id="contact-box">
+      <div className="contact-box__content">
         <h3>Welcome to my page</h3>
         <p>Any comments, raise me below!</p>
       </div>
-      <div className="contact__email_box">
+      <div className="contact-box__email_box">
         <form>
           <input
             type="email"

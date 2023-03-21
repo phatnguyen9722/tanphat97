@@ -1,0 +1,22 @@
+.banner {
+    @include flex(center, space-between);
+    &__content {
+        @include flex(center, center);
+        flex-direction: column;
+        h1 {
+           font-style: italic; 
+           font-weight: 400;
+        }
+    }
+    @include desktop {
+        &__content {
+            h1 {
+                text-align: center;
+            }
+        }
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,6 +1,8 @@
 function Contact() {
   return (
-   <>Contact me</>
+   <section className="contact">
+      <div className="contact__content">Contact me: phatnguyen.9722@gmail.com</div>
+   </section>
   );
 }
 
