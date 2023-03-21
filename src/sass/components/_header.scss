@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   height: $header-height;
-  background-color: $header-background-color;
+  background-image: linear-gradient(0, $header-background-color, #224c84);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   color: $header-text-color;
   .container {
