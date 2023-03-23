@@ -1,22 +1,67 @@
 .banner {
-    @include flex(center, space-between);
-    &__content {
-        @include flex(center, center);
-        flex-direction: column;
-        h1 {
-           font-style: italic; 
-           font-weight: 400;
-        }
+  @include flex(center, space-between);
+  &__content {
+    @include flex(center, center);
+    flex-direction: column;
+    h1 {
+      color: $layout-text-color;
+      font-size: 4.2rem;
+      font-weight: 350;
+
+      @include mobile {
+        font-size: 3rem;
+      }
     }
-    @include desktop {
-        &__content {
-            h1 {
-                text-align: center;
+    h3 {
+      color: $layout-text-active;
+      font-size: 2rem;
+      font-weight: 600;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+    .greet {
+      color: $layout-text-color;
+      font-size: 2.2rem;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
+    .place {
+      color: $layout-text-active;
+    }
+    .icon {
+        @include flex( center, center);
+        &__elements {
+            font-size: 1.5rem;
+            padding-right: 5px;
+            a {
+                color: $layout-text-color;
             }
         }
-        flex-direction: column;
-        img {
-            width: 100%;
+        @include mobile {
+            &__elements {
+                font-size: 1.6rem;
+                margin-right: 5px;
+            }
         }
     }
+  }
+
+  @include desktop {
+    &__content {
+      h1 {
+        text-align: center;
+      }
+    }
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
+  //   @include mobile {
+  //     flex-direction: column-reverse;
+  //   }
 }

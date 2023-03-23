@@ -4,7 +4,7 @@ $desktop: 1024px;
 $header-background-color: var(--main-color);
 $header-text-color: var(--text-color);
 $header-text-active-color: var(--text-active-color);
-$header-height: auto;
+$header-height: 5rem;
 
 $footer-background-color: var(--main-color);
 $footer-text-color: var(--text-color);
@@ -12,7 +12,12 @@ $footer-text-active: var(--text-active-color);
 $footer-height: auto;
 
 $layout-background: var(--layout-color);
+$layout-text-color: var(--main-color);
+$layout-text-active: #F0A04B;
 
 $contact-background-color: var(--main-color);
 $contact-background-opposite-color: var(--secondary-color);
 $contact-text-color: var(--text-color);
+
+$text-active: var(--text-active-color);
+$text-color: var(--text-color);

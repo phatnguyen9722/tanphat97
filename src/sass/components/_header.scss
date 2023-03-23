@@ -34,7 +34,7 @@ header {
       margin: 0 2rem;
       color: $header-text-color;
       text-decoration: none;
-
+      text-transform: uppercase;
       &:hover {
         color: $header-text-active-color;
         font-weight: 500;
@@ -83,4 +83,22 @@ header {
       opacity: 1;
     }
   }
+
+  .change-theme-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $header-text-color;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $header-text-active-color;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
 }

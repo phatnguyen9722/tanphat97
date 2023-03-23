@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import _ from "lodash"
-import { FaBars, FaTimes } from "react-icons/fa";
+import _ from "lodash";
+import { FaBars, FaTimes, FaMoon } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -23,8 +23,8 @@ const mainNav = [
   },
   {
     display: "My CV",
-    path: "/cv"
-  }
+    path: "/cv",
+  },
 ];
 
 function Header() {
@@ -43,8 +43,8 @@ function Header() {
         const topOffset = targetElement.offsetTop;
         window.scrollTo({
           top: topOffset,
-          behavior: "smooth"
-        })
+          behavior: "smooth",
+        });
       }
     } else {
       window.location.href = path;
@@ -54,12 +54,12 @@ function Header() {
   const prevScrollY = useRef(0);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [opacity, setOpacity] = useState(1);
-  
+
   useEffect(() => {
     const debounceHandleScroll = _.debounce(() => {
       const currentScrollY = window.scrollY;
       prevScrollY.current = currentScrollY;
-  
+
       // Check the direction of the scroll
       if (currentScrollY === 0) {
         setOpacity(1);
@@ -71,15 +71,14 @@ function Header() {
       // Store the last scroll position
       setLastScrollTop(currentScrollY);
     }, 300);
-  
+
     window.addEventListener("scroll", debounceHandleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", debounceHandleScroll);
     };
   }, [lastScrollTop]);
 
-  
   return (
     <header style={{ opacity }}>
       <div className="container">
@@ -108,6 +107,9 @@ function Header() {
         </nav>
         <button className="nav-btn" onClick={showNavbar}>
           <FaBars />
+        </button>
+        <button className="change-theme-btn" onClick={ () => console.log("test") }>
+          <FaMoon />
         </button>
       </div>
     </header>
